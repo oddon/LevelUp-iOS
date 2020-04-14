@@ -23,6 +23,7 @@ class SkillListViewController: UIViewController, Presentable {
         setupViewHierarchy()
         setupConstraints()
         setupBackground()
+        setupNavigationBar()
         configure(with: viewModel)
     }
     
@@ -39,15 +40,19 @@ class SkillListViewController: UIViewController, Presentable {
         view.backgroundColor = Color.background.uiColor
     }
     
+    private func setupNavigationBar() {
+        navigationItem.title = "Skills"
+    }
+    
     private func configure(with viewModel: ViewModel) {
-        // TODO: UPdate viewModel
+        // TODO: Update viewModel
         let list = [
-            SkillCardViewModel(name: "ReactiveSwift", icon: "", color: .blue),
-            SkillCardViewModel(name: "Gardening", icon: "", color: .blue),
-            SkillCardViewModel(name: "Machine Learning", icon: "", color: .blue),
-            SkillCardViewModel(name: "Biking", icon: "", color: .blue),
-            SkillCardViewModel(name: "Calculus", icon: "", color: .blue),
-            SkillCardViewModel(name: "Statistics", icon: "", color: .blue)
+            SkillCardViewModel(name: "ReactiveSwift", level: "16", icon: "", color: .blue),
+            SkillCardViewModel(name: "Gardening", level: "8", icon: "", color: .blue),
+            SkillCardViewModel(name: "Machine Learning", level: "14", icon: "", color: .blue),
+            SkillCardViewModel(name: "Biking", level: "12", icon: "", color: .blue),
+            SkillCardViewModel(name: "Calculus", level: "55", icon: "", color: .blue),
+            SkillCardViewModel(name: "Statistics", level: "21", icon: "", color: .blue)
         ]
         skillListView.configure(with: SkillListViewModel(list: list))
     }

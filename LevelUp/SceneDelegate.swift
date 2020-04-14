@@ -21,12 +21,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let initialViewController = SkillListViewController()
-            let navigationController = UINavigationController(rootViewController: initialViewController)
-            window.rootViewController = navigationController
+            window.rootViewController = createRootViewController()
             self.window = window
             window.makeKeyAndVisible()
         }
+    }
+    
+    private func createRootViewController() -> UIViewController {
+        let tabBarViewController = UITabBarController()
+        tabBarViewController.viewControllers = [generateNavigationController(title: "Timer", image: #imageLiteral(resourceName: "Timer")),
+                                                generateNavigationController(title: "Skills", image: #imageLiteral(resourceName: "Skills")),
+                                                generateNavigationController(title: "Stats", image: #imageLiteral(resourceName: "Stats")),
+                                                generateNavigationController(title: "Settings", image: #imageLiteral(resourceName: "Settings"))]
+        
+        
+        return tabBarViewController
+    }
+    
+    private func generateNavigationController(title: String, image: UIImage) -> UINavigationController {
+        let viewController = UINavigationController(rootViewController: SkillListViewController())
+        viewController.title = title
+        viewController.tabBarItem.image = image
+        return viewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -14,6 +14,7 @@ struct SkillListViewModel {
 
 struct SkillCardViewModel {
     let name: String
+    let level: String
     let icon: String
     let color: SkillCardColor
 }

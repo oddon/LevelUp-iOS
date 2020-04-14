@@ -10,11 +10,12 @@ import UIKit
 
 enum Color { // TODO: Maybe rename this to something else
     case background
+    case lightText
     case cardBorder
     
     var uiColor: UIColor {
         switch self {
-        case .background:
+        case .background, .lightText:
             return .white
         case .cardBorder:
             return .black

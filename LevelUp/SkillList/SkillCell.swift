@@ -50,9 +50,20 @@ class SkillCardView: UIView {
         static let cornerRadius: CGFloat = 8
         static let topPadding: CGFloat = 4
         static let leadingTabWidth: CGFloat = 124
+        static let levelLabelFont: CGFloat = 48
+        static let levelMinimumScaleFactor: CGFloat = 0.5
     }
     
     private let nameLabel = UILabel()
+    private let levelLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = Color.lightText.uiColor
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.font = UIFont.systemFont(ofSize: Constants.levelLabelFont)
+        label.minimumScaleFactor = Constants.levelMinimumScaleFactor
+        return label
+    }()
     private let leadingTabView: UIView = {
         let view = UIView()
         view.backgroundColor = .red
@@ -72,9 +83,10 @@ class SkillCardView: UIView {
     }
     
     private func setupViewHierarchy() {
-        addSubview(nameLabel)
         addSubview(leadingTabView)
         addLayoutGuide(trailingBodyLayoutGuide)
+        addSubview(nameLabel)
+        addSubview(levelLabel)
     }
     
     private func setupBorder() {
@@ -87,6 +99,7 @@ class SkillCardView: UIView {
     private func setupConstraints() {
         leadingTabView.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        levelLabel.translatesAutoresizingMaskIntoConstraints = false
         
         leadingTabView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         leadingTabView.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -100,10 +113,14 @@ class SkillCardView: UIView {
         
         nameLabel.topAnchor.constraint(equalTo: trailingBodyLayoutGuide.topAnchor, constant: Constants.topPadding).isActive = true
         nameLabel.centerXAnchor.constraint(equalTo: trailingBodyLayoutGuide.centerXAnchor).isActive = true
+        
+        levelLabel.centerYAnchor.constraint(equalTo: leadingTabView.centerYAnchor).isActive = true
+        levelLabel.widthAnchor.constraint(equalTo: leadingTabView.widthAnchor).isActive = true
     }
     
     func configure(with viewModel: SkillCardViewModel) {
         nameLabel.text = viewModel.name
+        levelLabel.text = viewModel.level
         layer.borderColor = viewModel.color.cgColor
         leadingTabView.backgroundColor = viewModel.color.uiColor
     }
