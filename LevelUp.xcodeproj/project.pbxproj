@@ -19,6 +19,9 @@
 		B59745632442FFC8005D1372 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745622442FFC8005D1372 /* Presentable.swift */; };
 		B59745652443047D005D1372 /* SkillListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745642443047D005D1372 /* SkillListViewPresenter.swift */; };
 		B597456B24430C3C005D1372 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597456A24430C3C005D1372 /* Color.swift */; };
+		B597456D244440DC005D1372 /* SkillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597456C244440DC005D1372 /* SkillListView.swift */; };
+		B597456F24444134005D1372 /* SkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597456E24444134005D1372 /* SkillCell.swift */; };
+		B597457124444175005D1372 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597457024444175005D1372 /* UIView+Autolayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		B59745622442FFC8005D1372 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		B59745642443047D005D1372 /* SkillListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListViewPresenter.swift; sourceTree = "<group>"; };
 		B597456A24430C3C005D1372 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B597456C244440DC005D1372 /* SkillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListView.swift; sourceTree = "<group>"; };
+		B597456E24444134005D1372 /* SkillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCell.swift; sourceTree = "<group>"; };
+		B597457024444175005D1372 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				B597455D2442F93F005D1372 /* SkillListViewController.swift */,
+				B597456E24444134005D1372 /* SkillCell.swift */,
 				B597455F2442FD04005D1372 /* SkillListViewModel.swift */,
+				B597456C244440DC005D1372 /* SkillListView.swift */,
 				B59745642443047D005D1372 /* SkillListViewPresenter.swift */,
 			);
 			path = SkillList;
@@ -160,6 +168,7 @@
 			children = (
 				B59745622442FFC8005D1372 /* Presentable.swift */,
 				B597456A24430C3C005D1372 /* Color.swift */,
+				B597457024444175005D1372 /* UIView+Autolayout.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -296,10 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59745632442FFC8005D1372 /* Presentable.swift in Sources */,
+				B597456F24444134005D1372 /* SkillCell.swift in Sources */,
 				B59745652443047D005D1372 /* SkillListViewPresenter.swift in Sources */,
 				B57F476B2442E621008B7BB1 /* AppDelegate.swift in Sources */,
 				B597455E2442F93F005D1372 /* SkillListViewController.swift in Sources */,
+				B597456D244440DC005D1372 /* SkillListView.swift in Sources */,
 				B597456B24430C3C005D1372 /* Color.swift in Sources */,
+				B597457124444175005D1372 /* UIView+Autolayout.swift in Sources */,
 				B59745602442FD04005D1372 /* SkillListViewModel.swift in Sources */,
 				B57F476D2442E621008B7BB1 /* SceneDelegate.swift in Sources */,
 			);
