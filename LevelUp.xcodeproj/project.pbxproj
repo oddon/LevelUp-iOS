@@ -22,6 +22,8 @@
 		B597456D244440DC005D1372 /* SkillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597456C244440DC005D1372 /* SkillListView.swift */; };
 		B597456F24444134005D1372 /* SkillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597456E24444134005D1372 /* SkillCell.swift */; };
 		B597457124444175005D1372 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597457024444175005D1372 /* UIView+Autolayout.swift */; };
+		B59745762446E511005D1372 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745752446E511005D1372 /* SettingsViewController.swift */; };
+		B59745782446E64D005D1372 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745772446E64D005D1372 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		B597456C244440DC005D1372 /* SkillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListView.swift; sourceTree = "<group>"; };
 		B597456E24444134005D1372 /* SkillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillCell.swift; sourceTree = "<group>"; };
 		B597457024444175005D1372 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
+		B59745752446E511005D1372 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B59745772446E64D005D1372 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			children = (
 				B59745612442FF7B005D1372 /* Common */,
 				B597455C2442F8D2005D1372 /* SkillList */,
+				B59745742446E4EC005D1372 /* Settings */,
 				B57F476A2442E621008B7BB1 /* AppDelegate.swift */,
 				B57F476C2442E621008B7BB1 /* SceneDelegate.swift */,
 				B57F47702442E622008B7BB1 /* Assets.xcassets */,
@@ -171,6 +176,15 @@
 				B597457024444175005D1372 /* UIView+Autolayout.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B59745742446E4EC005D1372 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B59745752446E511005D1372 /* SettingsViewController.swift */,
+				B59745772446E64D005D1372 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +320,7 @@
 			files = (
 				B59745632442FFC8005D1372 /* Presentable.swift in Sources */,
 				B597456F24444134005D1372 /* SkillCell.swift in Sources */,
+				B59745762446E511005D1372 /* SettingsViewController.swift in Sources */,
 				B59745652443047D005D1372 /* SkillListViewPresenter.swift in Sources */,
 				B57F476B2442E621008B7BB1 /* AppDelegate.swift in Sources */,
 				B597455E2442F93F005D1372 /* SkillListViewController.swift in Sources */,
@@ -314,6 +329,7 @@
 				B597457124444175005D1372 /* UIView+Autolayout.swift in Sources */,
 				B59745602442FD04005D1372 /* SkillListViewModel.swift in Sources */,
 				B57F476D2442E621008B7BB1 /* SceneDelegate.swift in Sources */,
+				B59745782446E64D005D1372 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

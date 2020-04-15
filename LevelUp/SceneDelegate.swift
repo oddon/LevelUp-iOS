@@ -29,17 +29,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func createRootViewController() -> UIViewController {
         let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers = [generateNavigationController(title: "Timer", image: #imageLiteral(resourceName: "Timer")),
-                                                generateNavigationController(title: "Skills", image: #imageLiteral(resourceName: "Skills")),
-                                                generateNavigationController(title: "Stats", image: #imageLiteral(resourceName: "Stats")),
-                                                generateNavigationController(title: "Settings", image: #imageLiteral(resourceName: "Settings"))]
+        tabBarViewController.viewControllers = [generateNavigationController(title: "Timer", image: #imageLiteral(resourceName: "Timer"), viewController: SkillListViewController()),
+                                                generateNavigationController(title: "Skills", image: #imageLiteral(resourceName: "Skills"), viewController: SkillListViewController()),
+                                                generateNavigationController(title: "Stats", image: #imageLiteral(resourceName: "Stats"), viewController: SkillListViewController()),
+                                                generateNavigationController(title: "Settings", image: #imageLiteral(resourceName: "Settings"), viewController: SettingsViewController())]
         
         
         return tabBarViewController
     }
     
-    private func generateNavigationController(title: String, image: UIImage) -> UINavigationController {
-        let viewController = UINavigationController(rootViewController: SkillListViewController())
+    private func generateNavigationController(title: String, image: UIImage, viewController: UIViewController) -> UINavigationController {
+        let viewController = UINavigationController(rootViewController: viewController)
         viewController.title = title
         viewController.tabBarItem.image = image
         return viewController
