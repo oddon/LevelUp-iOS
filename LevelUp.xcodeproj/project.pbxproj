@@ -16,7 +16,6 @@
 		B57F478D2442E622008B7BB1 /* LevelUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F478C2442E622008B7BB1 /* LevelUpUITests.swift */; };
 		B597455E2442F93F005D1372 /* SkillListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597455D2442F93F005D1372 /* SkillListViewController.swift */; };
 		B59745602442FD04005D1372 /* SkillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597455F2442FD04005D1372 /* SkillListViewModel.swift */; };
-		B59745632442FFC8005D1372 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745622442FFC8005D1372 /* Presentable.swift */; };
 		B59745652443047D005D1372 /* SkillListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745642443047D005D1372 /* SkillListViewPresenter.swift */; };
 		B597456B24430C3C005D1372 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597456A24430C3C005D1372 /* Color.swift */; };
 		B597456D244440DC005D1372 /* SkillListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597456C244440DC005D1372 /* SkillListView.swift */; };
@@ -24,6 +23,7 @@
 		B597457124444175005D1372 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597457024444175005D1372 /* UIView+Autolayout.swift */; };
 		B59745762446E511005D1372 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745752446E511005D1372 /* SettingsViewController.swift */; };
 		B59745782446E64D005D1372 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745772446E64D005D1372 /* SettingsViewModel.swift */; };
+		B5974580244EB35E005D1372 /* AddSkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597457F244EB35E005D1372 /* AddSkillViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,6 @@
 		B57F478E2442E622008B7BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B597455D2442F93F005D1372 /* SkillListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListViewController.swift; sourceTree = "<group>"; };
 		B597455F2442FD04005D1372 /* SkillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListViewModel.swift; sourceTree = "<group>"; };
-		B59745622442FFC8005D1372 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		B59745642443047D005D1372 /* SkillListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListViewPresenter.swift; sourceTree = "<group>"; };
 		B597456A24430C3C005D1372 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B597456C244440DC005D1372 /* SkillListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListView.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		B597457024444175005D1372 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		B59745752446E511005D1372 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B59745772446E64D005D1372 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		B597457F244EB35E005D1372 /* AddSkillViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B597455D2442F93F005D1372 /* SkillListViewController.swift */,
+				B597457F244EB35E005D1372 /* AddSkillViewController.swift */,
 				B597456E24444134005D1372 /* SkillCell.swift */,
 				B597455F2442FD04005D1372 /* SkillListViewModel.swift */,
 				B597456C244440DC005D1372 /* SkillListView.swift */,
@@ -171,7 +172,6 @@
 		B59745612442FF7B005D1372 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				B59745622442FFC8005D1372 /* Presentable.swift */,
 				B597456A24430C3C005D1372 /* Color.swift */,
 				B597457024444175005D1372 /* UIView+Autolayout.swift */,
 			);
@@ -318,9 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59745632442FFC8005D1372 /* Presentable.swift in Sources */,
 				B597456F24444134005D1372 /* SkillCell.swift in Sources */,
 				B59745762446E511005D1372 /* SettingsViewController.swift in Sources */,
+				B5974580244EB35E005D1372 /* AddSkillViewController.swift in Sources */,
 				B59745652443047D005D1372 /* SkillListViewPresenter.swift in Sources */,
 				B57F476B2442E621008B7BB1 /* AppDelegate.swift in Sources */,
 				B597455E2442F93F005D1372 /* SkillListViewController.swift in Sources */,

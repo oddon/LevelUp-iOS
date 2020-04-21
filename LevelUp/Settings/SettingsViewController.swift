@@ -8,13 +8,9 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, Presentable {
+class SettingsViewController: UIViewController {
     var presenter: Any?
-    var viewModel = SkillListViewModel(list: []) {
-        didSet {
-            configure(with: viewModel)
-        }
-    }
+    var viewModel = SkillListViewModel(list: [])
     
     private lazy var skillListView = SkillListView(frame: view.frame)
 
@@ -24,7 +20,7 @@ class SettingsViewController: UIViewController, Presentable {
         setupConstraints()
         setupBackground()
         setupNavigationBar()
-        configure(with: viewModel)
+        update(with: viewModel)
     }
     
     private func setupViewHierarchy() {
@@ -44,7 +40,7 @@ class SettingsViewController: UIViewController, Presentable {
         navigationItem.title = "Skills"
     }
     
-    private func configure(with viewModel: ViewModel) {
+    private func update(with viewModel: SkillListViewModel) {
         // TODO: Update viewModel
         let list = [
             SkillCardViewModel(name: "ReactiveSwift", level: "16", icon: "", color: .blue),
@@ -54,6 +50,6 @@ class SettingsViewController: UIViewController, Presentable {
             SkillCardViewModel(name: "Calculus", level: "55", icon: "", color: .blue),
             SkillCardViewModel(name: "Statistics", level: "21", icon: "", color: .blue)
         ]
-        skillListView.configure(with: SkillListViewModel(list: list))
+        skillListView.update(with: SkillListViewModel(list: list))
     }
 }

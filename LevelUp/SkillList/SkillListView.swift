@@ -29,7 +29,7 @@ class SkillListView: UIView {
         super.init(frame: frame)
         setupViewHierarchy()
         setupConstraints()
-        configure(with: viewModel)
+        update(with: viewModel)
     }
     
     private func setupViewHierarchy() {
@@ -45,7 +45,7 @@ class SkillListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with viewModel: SkillListViewModel) {
+    func update(with viewModel: SkillListViewModel) {
         self.viewModel = viewModel
         tableView.reloadData()
     }
@@ -61,7 +61,7 @@ extension SkillListView: UITableViewDataSource {
             return UITableViewCell()
         }
         let cellViewModel = viewModel.list[indexPath.row]
-        cell.configure(with: cellViewModel)
+        cell.update(with: cellViewModel)
         return cell
     }
 }
@@ -71,3 +71,10 @@ extension SkillListView: UITableViewDelegate {
         return Constants.skillCellHeight
     }
 }
+
+// TODO: Remove this - Code to scroll to the bottom of the page
+/*
+if viewModel.list.count > 0 {
+    tableView.scrollToRow(at: IndexPath(row: viewModel.list.count - 1, section: 0), at: .bottom, animated: true)
+}
+ */

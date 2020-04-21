@@ -39,8 +39,8 @@ class SkillCell: UITableViewCell {
                                                    right: Constants.cellPadding))
     }
     
-    func configure(with viewModel: SkillCardViewModel) {
-        skillCard.configure(with: viewModel)
+    func update(with viewModel: SkillCardViewModel) {
+        skillCard.update(with: viewModel)
     }
 }
 
@@ -118,7 +118,7 @@ class SkillCardView: UIView {
         levelLabel.widthAnchor.constraint(equalTo: leadingTabView.widthAnchor).isActive = true
     }
     
-    func configure(with viewModel: SkillCardViewModel) {
+    func update(with viewModel: SkillCardViewModel) {
         nameLabel.text = viewModel.name
         levelLabel.text = viewModel.level
         layer.borderColor = viewModel.color.cgColor

@@ -8,13 +8,17 @@
 
 import UIKit
 
-class SkillListViewController: UIViewController, Presentable {
-    var presenter: Any?
-    var viewModel = SkillListViewModel(list: []) {
-        didSet {
-            configure(with: viewModel)
-        }
-    }
+protocol SkillListViewControllerDelegate { // TODO: Figure out a better name for this
+    func start()
+    func handleAddButtonPress()
+}
+
+class SkillListViewController: UIViewController {
+    lazy var presenter: SkillListViewControllerDelegate = {
+        let presenter = SkillListViewPresenter()
+        presenter.delegate = self
+        return presenter
+    }()
     
     private lazy var skillListView = SkillListView(frame: view.frame)
 
@@ -24,7 +28,7 @@ class SkillListViewController: UIViewController, Presentable {
         setupConstraints()
         setupBackground()
         setupNavigationBar()
-        configure(with: viewModel)
+        presenter.start()
     }
     
     private func setupViewHierarchy() {
@@ -42,18 +46,21 @@ class SkillListViewController: UIViewController, Presentable {
     
     private func setupNavigationBar() {
         navigationItem.title = "Skills"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(handleAddButtonPress))
     }
-    
-    private func configure(with viewModel: ViewModel) {
-        // TODO: Update viewModel
-        let list = [
-            SkillCardViewModel(name: "ReactiveSwift", level: "16", icon: "", color: .blue),
-            SkillCardViewModel(name: "Gardening", level: "8", icon: "", color: .blue),
-            SkillCardViewModel(name: "Machine Learning", level: "14", icon: "", color: .blue),
-            SkillCardViewModel(name: "Biking", level: "12", icon: "", color: .blue),
-            SkillCardViewModel(name: "Calculus", level: "55", icon: "", color: .blue),
-            SkillCardViewModel(name: "Statistics", level: "21", icon: "", color: .blue)
-        ]
-        skillListView.configure(with: SkillListViewModel(list: list))
+}
+
+extension SkillListViewController {
+    @objc func handleAddButtonPress() {
+        presenter.handleAddButtonPress()
+    }
+}
+
+extension SkillListViewController: SkillListViewPresenterDelegate {
+    func update(with viewModel: SkillListViewModel) {
+        skillListView.update(with: viewModel)
+        let vc = SettingsViewController()
+        vc.modalPresentationStyle = .popover
+        present(vc, animated: true, completion: nil)
     }
 }
