@@ -59,7 +59,7 @@ extension SkillListViewController {
 extension SkillListViewController: SkillListViewPresenterDelegate {
     func update(with viewModel: SkillListViewModel) {
         skillListView.update(with: viewModel)
-        let vc = SettingsViewController()
+        let vc = UINavigationController(rootViewController: AddSkillViewController())
         vc.modalPresentationStyle = .popover
         present(vc, animated: true, completion: nil)
     }

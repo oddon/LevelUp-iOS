@@ -1,13 +1,15 @@
 //
-//  AddSkillViewController.swift
+//  AddSkillPresenter.swift
 //  LevelUp
 //
 //  Created by Don Vo on 4/20/20.
 //  Copyright © 2020 Don Vo. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class AddSkillViewController: UIViewController {
-    
+class AddSkillPresenter {
+    func start() {
+        
+    }
 }
