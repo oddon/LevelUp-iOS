@@ -32,7 +32,7 @@ class SkillCell: UITableViewCell {
     
     private func setupConstraints() {
         skillCard.translatesAutoresizingMaskIntoConstraints = false
-        contentView.constrain(edgesTo: skillCard,
+        skillCard.constrain(edgesTo: contentView,
                               insets: UIEdgeInsets(top: Constants.cellPadding,
                                                    left: Constants.cellPadding,
                                                    bottom: Constants.cellPadding,

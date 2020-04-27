@@ -13,7 +13,11 @@ class AddSkillViewController: UIViewController {
         return AddSkillPresenter()
     }()
     
-    private let stackView = UIStackView()
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        return stackView
+    }()
     
     private let skillLabel: UILabel = {
         let label = UILabel()
@@ -37,14 +41,14 @@ class AddSkillViewController: UIViewController {
     private func setupViewHierarchy() {
         view.addSubview(stackView)
         stackView.addArrangedSubview(skillLabel)
-        stackView.addSubview(skillTextInputView)
+        stackView.addArrangedSubview(skillTextInputView)
     }
     
     private func setupConstraints() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         skillLabel.translatesAutoresizingMaskIntoConstraints = false
         skillTextInputView.translatesAutoresizingMaskIntoConstraints = false
-        view.constrain(edgesTo: stackView)
+        stackView.constrain(edgesTo: view.safeAreaLayoutGuide)
     }
     
     private func setupBackground() {
@@ -59,10 +63,12 @@ class AddSkillViewController: UIViewController {
 
 extension AddSkillViewController {
     @objc func handleCancelButtonPress() {
-
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @objc func handleSaveButtonPress() {
-
+        presentingViewController?.dismiss(animated: true, completion: {
+            
+        })
     }
 }

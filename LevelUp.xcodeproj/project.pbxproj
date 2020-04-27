@@ -14,6 +14,9 @@
 		B57F47772442E622008B7BB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57F47752442E622008B7BB1 /* LaunchScreen.storyboard */; };
 		B57F47822442E622008B7BB1 /* LevelUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F47812442E622008B7BB1 /* LevelUpTests.swift */; };
 		B57F478D2442E622008B7BB1 /* LevelUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57F478C2442E622008B7BB1 /* LevelUpUITests.swift */; };
+		B580B78D2456625B006E3AF9 /* SkillStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B78C2456625B006E3AF9 /* SkillStore.swift */; };
+		B580B78F245662F1006E3AF9 /* SkillListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B78E245662F1006E3AF9 /* SkillListModel.swift */; };
+		B580B7922456631A006E3AF9 /* SkillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580B7912456631A006E3AF9 /* SkillModel.swift */; };
 		B597455E2442F93F005D1372 /* SkillListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597455D2442F93F005D1372 /* SkillListViewController.swift */; };
 		B59745602442FD04005D1372 /* SkillListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B597455F2442FD04005D1372 /* SkillListViewModel.swift */; };
 		B59745652443047D005D1372 /* SkillListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59745642443047D005D1372 /* SkillListViewPresenter.swift */; };
@@ -60,6 +63,9 @@
 		B57F47882442E622008B7BB1 /* LevelUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LevelUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57F478C2442E622008B7BB1 /* LevelUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelUpUITests.swift; sourceTree = "<group>"; };
 		B57F478E2442E622008B7BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B580B78C2456625B006E3AF9 /* SkillStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillStore.swift; sourceTree = "<group>"; };
+		B580B78E245662F1006E3AF9 /* SkillListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListModel.swift; sourceTree = "<group>"; };
+		B580B7912456631A006E3AF9 /* SkillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillModel.swift; sourceTree = "<group>"; };
 		B597455D2442F93F005D1372 /* SkillListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListViewController.swift; sourceTree = "<group>"; };
 		B597455F2442FD04005D1372 /* SkillListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListViewModel.swift; sourceTree = "<group>"; };
 		B59745642443047D005D1372 /* SkillListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillListViewPresenter.swift; sourceTree = "<group>"; };
@@ -164,6 +170,15 @@
 			path = LevelUpUITests;
 			sourceTree = "<group>";
 		};
+		B580B79024566300006E3AF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B580B78E245662F1006E3AF9 /* SkillListModel.swift */,
+				B580B7912456631A006E3AF9 /* SkillModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B597455C2442F8D2005D1372 /* SkillList */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +196,8 @@
 			children = (
 				B597456A24430C3C005D1372 /* Color.swift */,
 				B597457024444175005D1372 /* UIView+Autolayout.swift */,
+				B580B79024566300006E3AF9 /* Models */,
+				B580B78C2456625B006E3AF9 /* SkillStore.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -348,12 +365,15 @@
 				B5974580244EB35E005D1372 /* AddSkillViewController.swift in Sources */,
 				B597458A244EBD75005D1372 /* AddSkillPresenter.swift in Sources */,
 				B59745652443047D005D1372 /* SkillListViewPresenter.swift in Sources */,
+				B580B7922456631A006E3AF9 /* SkillModel.swift in Sources */,
 				B57F476B2442E621008B7BB1 /* AppDelegate.swift in Sources */,
 				B597455E2442F93F005D1372 /* SkillListViewController.swift in Sources */,
+				B580B78D2456625B006E3AF9 /* SkillStore.swift in Sources */,
 				B597456D244440DC005D1372 /* SkillListView.swift in Sources */,
 				B597456B24430C3C005D1372 /* Color.swift in Sources */,
 				B597457124444175005D1372 /* UIView+Autolayout.swift in Sources */,
 				B5974585244EB4C1005D1372 /* Tab.swift in Sources */,
+				B580B78F245662F1006E3AF9 /* SkillListModel.swift in Sources */,
 				B59745602442FD04005D1372 /* SkillListViewModel.swift in Sources */,
 				B5974583244EB401005D1372 /* TabViewController.swift in Sources */,
 				B57F476D2442E621008B7BB1 /* SceneDelegate.swift in Sources */,

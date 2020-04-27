@@ -12,4 +12,8 @@ class AddSkillPresenter {
     func start() {
         
     }
+    
+    func didDismiss() {
+        
+    }
 }

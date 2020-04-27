@@ -37,7 +37,7 @@ class SkillListViewController: UIViewController {
     
     private func setupConstraints() {
         skillListView.translatesAutoresizingMaskIntoConstraints = false
-        view.constrain(edgesTo: skillListView)
+        skillListView.constrain(edgesTo: view)
     }
     
     private func setupBackground() {
