@@ -9,11 +9,14 @@
 import Foundation
 
 class AddSkillPresenter {
+    
+    private let skillStore = SkillMemoryStoreImpl()
+    
     func start() {
         
     }
     
-    func didDismiss() {
-        
+    func didSaveSkill(name: String) {
+        skillStore.add(skill: SkillModel(name: name))
     }
 }

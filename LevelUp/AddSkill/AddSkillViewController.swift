@@ -67,8 +67,9 @@ extension AddSkillViewController {
     }
     
     @objc func handleSaveButtonPress() {
+        let skillName = skillTextInputView.text!
         presentingViewController?.dismiss(animated: true, completion: {
-            
+            self.presenter.didSaveSkill(name: skillName)
         })
     }
 }

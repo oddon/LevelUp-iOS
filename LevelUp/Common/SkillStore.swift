@@ -13,14 +13,22 @@ protocol SkillStore {
     func add(skill: SkillModel)
 }
 
+// For testing purposes
 class SkillMemoryStoreImpl: SkillStore {
-    var skillList: SkillListModel
+    private static var skillList = SkillListModel(list: [
+        SkillModel(name: "Reactive Swift"),
+        SkillModel(name: "Gardening"),
+        SkillModel(name: "Machine Learning"),
+        SkillModel(name: "Biking"),
+        SkillModel(name: "Calculus"),
+        SkillModel(name: "Statistics")
+    ])
     
-    init(with skillList: SkillListModel) {
-        self.skillList = skillList
+    var skillList: SkillListModel {
+        return SkillMemoryStoreImpl.skillList
     }
-    
+
     func add(skill: SkillModel) {
-        skillList.list.append(skill)
+        SkillMemoryStoreImpl.skillList = skillList
     }
 }
